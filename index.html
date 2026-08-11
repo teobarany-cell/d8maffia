@@ -525,10 +525,15 @@
     background: var(--asphalt);
     position: relative; overflow: hidden;
     cursor: none;
+    min-height: 360px;
   }
   .artist-bg {
     position: absolute; inset: 0;
     transition: transform 0.6s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
   }
   .artist-card:hover .artist-bg { transform: scale(1.06); }
   .artist-overlay {
@@ -569,7 +574,7 @@
   .artist-real-photo {
     width: 100%; height: 100%;
     object-fit: cover;
-    object-position: center top;
+    object-position: center center;
     display: block;
     transition: transform 0.7s ease;
     position: absolute; inset: 0;
@@ -1691,17 +1696,17 @@
 <section class="artists" id="artists">
   <div class="reveal">
     <span class="section-label">Kollektíva</span>
-    <h2 class="section-title">ELŐADÓK</h2>
+    <h2 class="section-title">TAGOK</h2>
   </div>
   <div class="artists-grid">
-
-    <div class="artist-card artist-card-featured reveal">
+    <div class="artist-card reveal">
       <div class="artist-bg a1">
         <img
           src="images/JhonatanMemphisCamel.jpg"
           alt="Jhonatan Memphis"
           class="artist-real-photo"
           loading="lazy"
+          style="object-position:center center;"
         />
       </div>
       <span class="artist-num">01</span>
@@ -1726,7 +1731,7 @@
       </div>
     </div>
 
-    <div class="artist-card reveal reveal-delay-2">
+    <div class="artist-card reveal reveal-delay-1">
       <div class="artist-bg a6">
         <img
           src="images/bennie-9.jpg"
@@ -1742,7 +1747,8 @@
         <div class="artist-genre">Producer · Budapest</div>
       </div>
     </div>
-    <div class="artist-card reveal reveal-delay-3">
+
+    <div class="artist-card reveal reveal-delay-2">
       <div class="artist-bg a7">
         <img
           src="images/IMG_0141.jpg"
@@ -1758,17 +1764,8 @@
         <div class="artist-genre">MC · Budapest</div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- MANAGEMENT -->
-<section class="artists" id="management">
-  <div class="reveal">
-    <span class="section-label">Menedzsment</span>
-    <h2 class="section-title">MENEDZSMENT</h2>
-  </div>
-  <div class="artists-grid">
-    <div class="artist-card reveal">
+    <div class="artist-card reveal reveal-delay-3">
       <div class="artist-bg a6">
         <img
           src="images/TheoBarany.png"
@@ -1777,9 +1774,9 @@
           loading="lazy"
         />
       </div>
-      <span class="artist-num">01</span>
+      <span class="artist-num">04</span>
       <div class="artist-overlay">
-        <span class="artist-tag">Management</span>
+        <span class="artist-tag">Member</span>
         <div class="artist-name">THEO<br>BARANY</div>
         <div class="artist-genre">Manager · Budapest</div>
       </div>
